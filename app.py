@@ -53,8 +53,10 @@ def ap3():
     return response
 
 
-
-
+@app.route('/error', methods=['GET'])
+def errorrequest():
+    
+    return "Record not found", 400
 
 
 if __name__ == "__main__":

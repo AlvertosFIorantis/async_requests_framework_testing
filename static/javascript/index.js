@@ -162,3 +162,27 @@ button_6.addEventListener("click", async () => {
   var endTime2 = performance.now();
   alert(`Promisse all FlaskRest took ${endTime2 - startTime2} milliseconds`);
 });
+
+// eerror request
+
+async function ErrorRequest() {
+  const res = await axios.get("error");
+  console.log("Error Request", res.data);
+  return res.data;
+}
+
+const button_7 = document.getElementById("button_7");
+
+button_7.addEventListener("click", async () => {
+  var startTime = performance.now();
+  console.log("Simple method started");
+  try {
+    const err = await ErrorRequest();
+    console.log("error object", err);
+    console.log("simple method ended");
+    var endTime = performance.now();
+    alert(`Simple method Flask Rest took ${endTime - startTime} milliseconds`);
+  } catch (e) {
+    alert(`SError`);
+  }
+});
