@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Adding the tabulator cdn -->
+
+    <!-- Adding Axios CDNs -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    <div id="button_1" class="mainButton">Api calls 1 after the other</div>
+    <div id="button_2" class="mainButton">Promise all</div>
+    <div id="button_3" class="mainButton">
+      Api calls 1 after the other Express
+    </div>
+    <div id="button_4" class="mainButton">Promise all Express</div>
+    <div id="button_5" class="mainButton">
+      Api calls 1 after the other Flask REST
+    </div>
+    <div id="button_6" class="mainButton">Promise all FLask REst</div>
+  </body>
+  <script
+    src="{{url_for('static', filename='javascript/index.js')}}"
+    defer
+  ></script>
+</html>
